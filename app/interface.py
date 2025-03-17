@@ -54,6 +54,7 @@ input_df = pd.DataFrame([user_input])
 # ---- 🚀 Bouton de prédiction ----
 if st.sidebar.button("Prédire la Biopsy"):
     prediction = model.predict(input_df)[0]  # Faire la prédiction
+    proba = model.predict_proba(input_df)
     proba_risque = proba[0][0]  # Probabilité d'être dans la classe 0
     st.write(f"🟡 Probabilité du risque : {proba_risque:.2%}")
     biopsy_result = "🟢 Négatif (0)" if prediction == 1 else "🔴 Positif (1)"
