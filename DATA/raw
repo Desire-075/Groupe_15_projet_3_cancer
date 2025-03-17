@@ -1,4 +1,4 @@
-pip install ucimlrepo
+# Dans ce dossier on a mis le code python   permettant de générer la data bruteS
 from ucimlrepo import fetch_ucirepo 
   
 # fetch dataset 
